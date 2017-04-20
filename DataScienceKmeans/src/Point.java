@@ -9,8 +9,13 @@ public class Point {
     private int[] point = new int[32];
     private int clusterId;
     public List<Integer> boughtOffers = new ArrayList<>();
+    public double distanceToCluster;
 
 
+    public double getSquaredError()
+    {
+        return distanceToCluster * distanceToCluster;
+    }
 
     public void setPoint(int[] data){
         this.point = data;

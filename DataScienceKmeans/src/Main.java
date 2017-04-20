@@ -13,6 +13,7 @@ public class Main {
     boolean debug = false;
     static List<Point> datapoints;
     static Cluster[] centroids;
+    static double SSE;
     static int clusters = 4;
     static int maxIterations= 10;
     boolean finish = false;
@@ -51,8 +52,32 @@ public class Main {
             iteration++;
         }
 
-        System.out.println("Done after: " + iteration);
+//        System.out.println("Done after: " + iteration);
+        double tempSSE = getSSE();
+        double totalDistance = getTotalDistance();
+        System.out.println("Total distance to cluster: " + totalDistance + " , SSE (distance squared): " + tempSSE);
+        System.out.println();
         analyseData();
+    }
+    public double getTotalDistance()
+    {
+        double total = 0;
+        for(Point p : datapoints)
+        {
+            total += p.distanceToCluster;
+        }
+        return total;
+    }
+
+    public double getSSE()
+    {
+        double sumOfSE = 0;
+        for(Point p : datapoints)
+        {
+            double SE = p.getSquaredError();
+            sumOfSE += SE;
+        }
+        return sumOfSE;
     }
 
     public void analyseData()
@@ -144,6 +169,7 @@ public class Main {
                 }
             }
             datapoints.get(i).setClusterId(currentCluster);
+            datapoints.get(i).distanceToCluster = minimum;
             centroids[currentCluster].addPoint(datapoints.get(i));
         }
 //        for(int i = 0; i < datapoints.size(); i++)
@@ -205,8 +231,6 @@ public class Main {
                     centroids[i] = newCentroids[i];
                 }
             }
-
-
         }
 
     }
