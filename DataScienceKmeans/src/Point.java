@@ -37,7 +37,7 @@ public class Point {
             {
                 if(point[i] == 1)
                 {
-                    boughtOffers.add(i + 1);
+                    boughtOffers.add(i + 1); //+1 because offers begin at 1 instead of 0
                 }
             }
         }

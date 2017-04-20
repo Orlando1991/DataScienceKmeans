@@ -25,13 +25,11 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="97" column="89" selection-start-line="97" selection-start-column="12" selection-end-line="97" selection-end-column="93" />
+            <state relative-caret-position="232">
+              <caret line="66" column="45" selection-start-line="60" selection-start-column="10" selection-end-line="66" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#buildCentroids#0;class#Main#0" expanded="false" />
-                <element signature="method#euclideanDistance#0;class#Main#0" expanded="false" />
-                <element signature="method#readCSV#0;class#Main#0" expanded="false" />
+                <element signature="method#createDataPoints#0;class#Main#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -40,10 +38,9 @@
       <file leaf-file-name="Point.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Point.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+            <state relative-caret-position="241">
+              <caret line="39" column="88" selection-start-line="39" selection-start-column="88" selection-end-line="39" selection-end-column="88" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#345#346#0" expanded="true" />
                 <element signature="e#373#374#0" expanded="true" />
               </folding>
@@ -54,9 +51,12 @@
       <file leaf-file-name="Cluster.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cluster.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="20" column="5" selection-start-line="14" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="102">
+              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+              <folding>
+                <element signature="e#505#506#0" expanded="true" />
+                <element signature="e#541#542#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,8 +78,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Point.java" />
         <option value="$PROJECT_DIR$/src/Cluster.java" />
+        <option value="$PROJECT_DIR$/src/Point.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
@@ -93,8 +93,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1552" />
+    <option name="height" value="840" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -121,29 +121,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataScienceKmeans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataScienceKmeans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataScienceKmeans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -602,39 +585,41 @@
       <workItem from="1489972002757" duration="969000" />
       <workItem from="1490549984567" duration="8826000" />
       <workItem from="1490599069419" duration="1609000" />
+      <workItem from="1492628507650" duration="3062000" />
+      <workItem from="1492641928134" duration="10057000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60879000" />
+    <option name="totallyTimeSpent" value="73998000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1552" height="840" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32599118" sideWeight="0.50268096" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32452276" sideWeight="0.49731904" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32452276" sideWeight="0.49731904" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14372164" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14343163" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -655,7 +640,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>174</line>
+          <line>249</line>
           <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -680,9 +665,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#buildCentroids#0;class#Main#0" expanded="false" />
-            <element signature="method#euclideanDistance#0;class#Main#0" expanded="false" />
-            <element signature="method#readCSV#0;class#Main#0" expanded="false" />
+            <element signature="method#createDataPoints#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -692,7 +675,28 @@
         <state relative-caret-position="255">
           <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
           <folding>
+            <element signature="e#345#346#0" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#createDataPoints#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding>
             <element signature="e#345#346#0" expanded="true" />
             <element signature="e#373#374#0" expanded="true" />
           </folding>
@@ -703,7 +707,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="20" column="5" selection-start-line="14" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -713,9 +720,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#buildCentroids#0;class#Main#0" expanded="false" />
-            <element signature="method#euclideanDistance#0;class#Main#0" expanded="false" />
-            <element signature="method#readCSV#0;class#Main#0" expanded="false" />
+            <element signature="method#createDataPoints#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -725,7 +730,39 @@
         <state relative-caret-position="255">
           <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
           <folding>
+            <element signature="e#345#346#0" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cluster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="20" column="5" selection-start-line="14" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#createDataPoints#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding>
             <element signature="e#345#346#0" expanded="true" />
             <element signature="e#373#374#0" expanded="true" />
           </folding>
@@ -736,7 +773,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="9" column="88" selection-start-line="9" selection-start-column="88" selection-end-line="9" selection-end-column="88" />
-          <folding />
+          <folding>
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -746,9 +786,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#buildCentroids#0;class#Main#0" expanded="false" />
-            <element signature="method#euclideanDistance#0;class#Main#0" expanded="false" />
-            <element signature="method#readCSV#0;class#Main#0" expanded="false" />
+            <element signature="method#createDataPoints#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -758,7 +796,6 @@
         <state relative-caret-position="330">
           <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#345#346#0" expanded="true" />
             <element signature="e#373#374#0" expanded="true" />
           </folding>
@@ -769,7 +806,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="9" column="88" selection-start-line="9" selection-start-column="88" selection-end-line="9" selection-end-column="88" />
-          <folding />
+          <folding>
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -779,9 +819,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#buildCentroids#0;class#Main#0" expanded="false" />
-            <element signature="method#euclideanDistance#0;class#Main#0" expanded="false" />
-            <element signature="method#readCSV#0;class#Main#0" expanded="false" />
+            <element signature="method#createDataPoints#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -791,7 +829,6 @@
         <state relative-caret-position="396">
           <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#345#346#0" expanded="true" />
             <element signature="e#373#374#0" expanded="true" />
           </folding>
@@ -802,7 +839,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="9" column="88" selection-start-line="9" selection-start-column="88" selection-end-line="9" selection-end-column="88" />
-          <folding />
+          <folding>
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -812,9 +852,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#buildCentroids#0;class#Main#0" expanded="false" />
-            <element signature="method#euclideanDistance#0;class#Main#0" expanded="false" />
-            <element signature="method#readCSV#0;class#Main#0" expanded="false" />
+            <element signature="method#createDataPoints#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -824,7 +862,6 @@
         <state relative-caret-position="510">
           <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#345#346#0" expanded="true" />
             <element signature="e#373#374#0" expanded="true" />
           </folding>
@@ -835,7 +872,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
-          <folding />
+          <folding>
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -845,9 +885,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#buildCentroids#0;class#Main#0" expanded="false" />
-            <element signature="method#euclideanDistance#0;class#Main#0" expanded="false" />
-            <element signature="method#readCSV#0;class#Main#0" expanded="false" />
+            <element signature="method#createDataPoints#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -857,7 +895,6 @@
         <state relative-caret-position="660">
           <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#345#346#0" expanded="true" />
             <element signature="e#373#374#0" expanded="true" />
           </folding>
@@ -868,7 +905,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
-          <folding />
+          <folding>
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -878,9 +918,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#buildCentroids#0;class#Main#0" expanded="false" />
-            <element signature="method#euclideanDistance#0;class#Main#0" expanded="false" />
-            <element signature="method#readCSV#0;class#Main#0" expanded="false" />
+            <element signature="method#createDataPoints#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -890,7 +928,6 @@
         <state relative-caret-position="136">
           <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#345#346#0" expanded="true" />
             <element signature="e#373#374#0" expanded="true" />
           </folding>
@@ -901,7 +938,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -911,9 +951,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#buildCentroids#0;class#Main#0" expanded="false" />
-            <element signature="method#euclideanDistance#0;class#Main#0" expanded="false" />
-            <element signature="method#readCSV#0;class#Main#0" expanded="false" />
+            <element signature="method#createDataPoints#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -923,7 +961,6 @@
         <state relative-caret-position="506">
           <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#345#346#0" expanded="true" />
             <element signature="e#373#374#0" expanded="true" />
           </folding>
@@ -934,7 +971,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -944,9 +984,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#buildCentroids#0;class#Main#0" expanded="false" />
-            <element signature="method#euclideanDistance#0;class#Main#0" expanded="false" />
-            <element signature="method#readCSV#0;class#Main#0" expanded="false" />
+            <element signature="method#createDataPoints#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -956,7 +994,6 @@
         <state relative-caret-position="85">
           <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#345#346#0" expanded="true" />
             <element signature="e#373#374#0" expanded="true" />
           </folding>
@@ -969,9 +1006,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#buildCentroids#0;class#Main#0" expanded="false" />
-            <element signature="method#euclideanDistance#0;class#Main#0" expanded="false" />
-            <element signature="method#readCSV#0;class#Main#0" expanded="false" />
+            <element signature="method#createDataPoints#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -981,7 +1016,6 @@
         <state relative-caret-position="85">
           <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#345#346#0" expanded="true" />
             <element signature="e#373#374#0" expanded="true" />
           </folding>
@@ -994,9 +1028,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#buildCentroids#0;class#Main#0" expanded="false" />
-            <element signature="method#euclideanDistance#0;class#Main#0" expanded="false" />
-            <element signature="method#readCSV#0;class#Main#0" expanded="false" />
+            <element signature="method#createDataPoints#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1006,7 +1038,6 @@
         <state relative-caret-position="85">
           <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#345#346#0" expanded="true" />
             <element signature="e#373#374#0" expanded="true" />
           </folding>
@@ -1019,9 +1050,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#buildCentroids#0;class#Main#0" expanded="false" />
-            <element signature="method#euclideanDistance#0;class#Main#0" expanded="false" />
-            <element signature="method#readCSV#0;class#Main#0" expanded="false" />
+            <element signature="method#createDataPoints#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1032,9 +1061,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#buildCentroids#0;class#Main#0" expanded="false" />
-            <element signature="method#euclideanDistance#0;class#Main#0" expanded="false" />
-            <element signature="method#readCSV#0;class#Main#0" expanded="false" />
+            <element signature="method#createDataPoints#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1045,27 +1072,27 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#buildCentroids#0;class#Main#0" expanded="false" />
-            <element signature="method#euclideanDistance#0;class#Main#0" expanded="false" />
-            <element signature="method#readCSV#0;class#Main#0" expanded="false" />
+            <element signature="method#createDataPoints#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cluster.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" column="5" selection-start-line="14" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="102">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+          <folding>
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Point.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        <state relative-caret-position="241">
+          <caret line="39" column="88" selection-start-line="39" selection-start-column="88" selection-end-line="39" selection-end-column="88" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#345#346#0" expanded="true" />
             <element signature="e#373#374#0" expanded="true" />
           </folding>
@@ -1074,13 +1101,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="97" column="89" selection-start-line="97" selection-start-column="12" selection-end-line="97" selection-end-column="93" />
+        <state relative-caret-position="232">
+          <caret line="66" column="45" selection-start-line="60" selection-start-column="10" selection-end-line="66" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#buildCentroids#0;class#Main#0" expanded="false" />
-            <element signature="method#euclideanDistance#0;class#Main#0" expanded="false" />
-            <element signature="method#readCSV#0;class#Main#0" expanded="false" />
+            <element signature="method#createDataPoints#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -4,47 +4,118 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
+import java.util.stream.IntStream;
 
 
 public class Main {
 
+    boolean debug = false;
     static List<Point> datapoints;
     static Cluster[] centroids;
     static int clusters = 4;
+    static int maxIterations= 10;
     boolean finish = false;
 
     public static void main(String[] args) {
+//        System.out.println("Input amount of clusters: ");
+//        Scanner scanner = new Scanner(System.in);
+//        clusters = scanner.nextInt();
+//        System.out.println("Input max iterations: ");
+//        maxIterations = scanner.nextInt();
+
         Main m = new Main();
         int[][] data = m.readCSV();
         datapoints = m.createDataPoints(data);
         centroids = m.buildCentroids(clusters, datapoints);
-        m.kMeans();
+        m.kMeans(centroids);
 //        for(int i=0; i < clusters; i++)
 //        {
 //            System.out.println(" Testing datapoint: "+  i + " " + Arrays.toString(buildCentroids(clusters, datapoints)[i].getCenter()));
 //        }
     }
 
-    public void kMeans()
+    public void kMeans(Cluster[] centroids)
     {
         int iteration = 0;
 
-        while(!finish)
+        while(!finish && iteration < maxIterations)
         {
             clearCluster(); //empties the list with assigned points to the cluster
             Cluster[] oldCentroids = centroids;
 
             assignCluster(); //assigns every point to a cluster id
 
+            calculateCentroid(oldCentroids, iteration); //takes the average of all the points added and centers centroid in it
 
-            System.out.println("testing" );
-            calculateCentroid(oldCentroids); //takes the average of all the points added and centers centroid in it
-            System.out.println("after" );
             iteration++;
         }
 
-        System.out.println("test: " + iteration);
+        System.out.println("Done after: " + iteration);
+        analyseData();
+    }
 
+    public void analyseData()
+    {
+
+//        int sum = 0;
+//        for(Cluster c : centroids)
+//        {
+//            sum += c.getPoints().size();
+//            System.out.println("testing centroids: " + c.getId() + " points assigned: " + c.getPoints().size());
+//        }
+//        System.out.println(" sum: " + sum);
+
+        for(Cluster c : centroids)
+       {
+           List<Point> clients = c.getPoints();
+           int amountOfOffers = clients.get(0).getPoint().length;
+           Integer[] boughtOffers = new Integer[amountOfOffers + 1]; //because boughtoffers doesnt have 0 else it would give outofindex
+           for(int i = 0; i <= amountOfOffers; i++)
+           {
+               boughtOffers[i] = 0;
+           }
+
+           //go over the assigned clients of cluster and sum up all their purchases at the right index
+           for(Point client : clients)
+           {
+               List<Integer> bought = client.getBoughtOffers();
+               for(int offer : bought)
+               {
+//                   System.out.println("offer: " + offer);
+                   boughtOffers[offer] += 1;
+               }
+           }
+           //logic to print here
+           if(debug){System.out.println("boughtoffers: " + Arrays.toString(boughtOffers));}
+
+           //sort the data and print it
+           sortLogic(boughtOffers, c.getId());
+
+       }
+
+    }
+
+    private void sortLogic(Integer[] boughtOffers, int id)
+    {
+        //sorts based on value, but returns the corresponding indices (sorted from high to low)
+        int[] sortedIndices = IntStream.range(0, boughtOffers.length)
+                .boxed().sorted((j, i) -> boughtOffers[i].compareTo(boughtOffers[j]) )
+                .mapToInt(ele -> ele).toArray();
+
+        int minimumBuys = 3;
+        System.out.println("CLUSTER: " + id);
+        for(int i =0; i< sortedIndices.length; i++)
+        {
+            int index = sortedIndices[i]; //the offer
+            int value = boughtOffers[index]; //amount of times offer was bought
+            if(value > minimumBuys)
+            {
+                System.out.println("OFFER: " + index + " -> bought " + value + " times");
+            }
+        }
+        if(debug){System.out.println("sorted index: " + Arrays.toString(sortedIndices) + " cluster: " + id);}
+        System.out.println("--------------------");
     }
 
     public  void clearCluster()
@@ -86,14 +157,14 @@ public class Main {
     }
 
 
-    public  void calculateCentroid(Cluster[] oldcentroids)
+    public  void calculateCentroid(Cluster[] oldcentroids, int iteration)
     {
         int same = 0;
         Cluster[] newCentroids = new Cluster[clusters];
 
         for(int i =0; i <centroids.length; i++)
         {
-            float[] newCenter = new float[32];
+            double[] newCenter = new double[32];
 
             List<Point> points = centroids[i].getPoints();  //points assigned to this cluster
             int npoints = points.size(); // sumOfPoints/npoints for average
@@ -105,7 +176,7 @@ public class Main {
 
                 for(int j = 0; j < pointsize; j++)
                 {
-                    newCenter[j] = newCenter[j] + (float)point[j];
+                    newCenter[j] = newCenter[j] + (double)point[j];
                 }
             }
             for(int k = 0; k < newCenter.length; k++) {
@@ -113,12 +184,13 @@ public class Main {
             }
             Cluster c = new Cluster();
             c.setCenter(newCenter);
+            c.setId(i);
             newCentroids[i] = c;
 
             if(Arrays.equals(newCentroids[i].getCenter(), oldcentroids[i].getCenter()))
             {
-                System.out.println("Old " + Arrays.toString(oldcentroids[i].getCenter()));
-                System.out.println( " new " + Arrays.toString(centroids[i].getCenter()));
+                if(debug){System.out.println("Old " + Arrays.toString(oldcentroids[i].getCenter()));}
+                if(debug){System.out.println( " new " + Arrays.toString(centroids[i].getCenter()));}
                 same = same + 1;
 
                 if(same == clusters) //so if all clusters remained the same this iteration
@@ -128,7 +200,10 @@ public class Main {
             }
             else
             {
-                centroids[i] = newCentroids[i];
+                if(iteration != maxIterations -1) //makes sure you keep the data if it's in its last iteration and the clusters are still moving
+                {
+                    centroids[i] = newCentroids[i];
+                }
             }
 
 
@@ -145,10 +220,10 @@ public class Main {
             int random = 0 + (int)(Math.random()* datapoints.size());
             int[] chosenPoint = datapoints.get(random).getPoint(); //returns int[]
             int size = datapoints.get(random).getPoint().length;
-            float[] randomPoint = new float[size];
+            double[] randomPoint = new double[size];
             for(int j = 0; j< size; j++)
             {
-                randomPoint[j] = (float) chosenPoint[j];
+                randomPoint[j] = (double) chosenPoint[j];
             }
 
             Cluster newPoint = new Cluster();
@@ -159,7 +234,7 @@ public class Main {
         return centroids;
     }
 
-    private  double euclideanDistance(int[] client, float[] centroid)
+    private  double euclideanDistance(int[] client, double[] centroid)
     {
         double sum = 0;
         for (int i = 0; i < client.length  ; i++)
